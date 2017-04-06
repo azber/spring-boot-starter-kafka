@@ -1,5 +1,6 @@
 package com.azber.springboot.kafka;
 
+import com.azber.springboot.kafka.consumer.KafkaConsumerConfig;
 import com.azber.springboot.kafka.producer.KafkaProducerConfig;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -13,5 +14,10 @@ public class KafkaAutoConfiguration {
     @Bean
     public KafkaProducerConfig kafkaProducerConfig() {
         return new KafkaProducerConfig();
+    }
+
+    @Bean
+    public KafkaConsumerConfig kafkaConsumerConfig() {
+        return new KafkaConsumerConfig();
     }
 }
